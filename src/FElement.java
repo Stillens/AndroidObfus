@@ -1,21 +1,21 @@
 import java.io.File;
 import java.net.URI;
 
-public class FileVisitor extends File implements Element {
+public class FElement extends File implements Element {
 
-    public FileVisitor(String pathname) {
+    public FElement(String pathname) {
         super(pathname);
     }
 
-    public FileVisitor(String parent, String child) {
+    public FElement(String parent, String child) {
         super(parent, child);
     }
 
-    public FileVisitor(File parent, String child) {
+    public FElement(File parent, String child) {
         super(parent, child);
     }
 
-    public FileVisitor(URI uri) {
+    public FElement(URI uri) {
         super(uri);
     }
 
