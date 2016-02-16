@@ -1,5 +1,4 @@
 
 interface Visitor {
-    void visit(E1 e);
-
+    void visit(Element e);
 }
