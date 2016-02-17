@@ -10,6 +10,7 @@ public class Main {
         FileVisitor someVisitor = new FileVisitor();
 
         someFileElement.accept(someVisitor);
+
     }
 
 
