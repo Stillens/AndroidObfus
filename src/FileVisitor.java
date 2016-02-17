@@ -13,16 +13,13 @@ public class FileVisitor implements Visitor {
             for (int i = 0; i < files.length; i++) {
 
                 if (files[i].isDirectory()) { //Если директория, то рекурсивно пробегаем
-                    depth++; //Увеличиваем уровень для элементов, которые в этой директории
                     FileElement innerDir = new FileElement(files[i].toString()); //Объект директории
-                    innerDir.pathname = files[i].toString(); //Переменная с путём
                     visit(innerDir); // Рекурсия тут
-                    depth--; //Поднимаемся на уровень обратно
                 }
                 else {
                     if (files[i].getName().toLowerCase().endsWith(".java")) { //нам нужны только *.java файлы
                         javaFileList.add(files[i].getAbsolutePath());
-
+                        System.out.println(files[i].getAbsolutePath());
                     }
                 }
 
